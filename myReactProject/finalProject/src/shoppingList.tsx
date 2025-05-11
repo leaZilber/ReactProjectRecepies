@@ -605,7 +605,6 @@ const ShoppingList = () => {
       const data = await response.json()
       setItems(data)
     } catch (err) {
-      // console.error("Error fetching shopping list:", err)
       setError("אירעה שגיאה בטעינת רשימת הקניות")
     } finally {
       setLoading(false)

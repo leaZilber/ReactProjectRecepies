@@ -27,7 +27,7 @@ interface LoginProps {
   onBackClick: () => void
 }
 
-export const Login2 = ({ onBackClick }: LoginProps) => {
+export const Login= ({ onBackClick }: LoginProps) => {
   const [showPassword, setShowPassword] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -61,12 +61,10 @@ export const Login2 = ({ onBackClick }: LoginProps) => {
 
       const response = await axios.post("http://localhost:8080/api/user/login", loginData)
 
-      console.log("Login successful:", response.data)
       setAuthorizedUser(true)
       setSuccess(true)
       navigate("/AllRecipes")
     } catch (err) {
-      console.error("Login error:", err)
       setError("התחברות נכשלה. אנא בדוק את פרטי ההתחברות שלך ונסה שוב.")
       setAuthorizedUser(false)
     } finally {

@@ -60,29 +60,6 @@ export const RecipeDetail = ({
     setDeleteDialogOpen(true)
   }
 
-  // const handleDeleteConfirm = async () => {
-  //   try {
-  //     setIsDeleting(true)
-  //     const response = await fetch(`http://localhost:8080/api/recipe/${recipe.Id}`, {
-  //       method: "DELETE",
-  //     })
-
-  //     if (!response.ok) {
-  //       throw new Error("Failed to delete recipe")
-  //     }
-
-  //     if (onRecipeDeleted) {
-  //       onRecipeDeleted()
-  //     }
-  //   } catch (error) {
-  //     console.error("Error deleting recipe:", error)
-  //   } finally {
-  //     setIsDeleting(false)
-  //     setDeleteDialogOpen(false)
-  //   }
-  // }
-
-
   const handleDeleteConfirm = async () => {
     try {
       setIsDeleting(true)
@@ -97,7 +74,6 @@ export const RecipeDetail = ({
         onRecipeDeleted()
       }
     } catch (error) {
-      console.error("Error deleting recipe:", error)
     } finally {
       setIsDeleting(false)
       setDeleteDialogOpen(false)
@@ -134,16 +110,6 @@ export const RecipeDetail = ({
         </Typography>
         <Box sx={{ flexGrow: 1 }} />
 
-        {/* {recipe.UserId === userId && (
-          <>
-            <Button variant="outlined" startIcon={<Edit />} onClick={handleEditClick} sx={{ mr: 2 }}>
-              ערוך
-            </Button>
-            <Button variant="outlined" color="error" startIcon={<Delete />} onClick={handleDeleteClick}>
-              מחק
-            </Button>
-          </>
-        )} */}
         {recipe.UserId === Number(userId) && (
           <>
             <Button variant="outlined" startIcon={<Edit />} onClick={handleEditClick} sx={{ mr: 2 }}>

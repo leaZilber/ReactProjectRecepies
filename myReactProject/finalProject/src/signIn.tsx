@@ -33,7 +33,7 @@ interface SignUpProps {
   onBackClick: () => void
 }
 
-export const SignUp2 = ({ onBackClick }: SignUpProps) => {
+export const SignUp= ({ onBackClick }: SignUpProps) => {
   const [showPassword, setShowPassword] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)

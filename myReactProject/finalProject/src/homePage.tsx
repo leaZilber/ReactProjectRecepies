@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react"
 import { Box, Container, Paper, Typography, ThemeProvider, createTheme, Button } from "@mui/material"
 import { Login as LoginIcon, HowToReg } from "@mui/icons-material"
-import { Login2 } from "./login"
-import { SignUp2 } from "./signIn"
+import { Login } from "./login"
+import { SignUp } from "./signIn"
 import { UserProvider } from "./userModel"
 import React from "react"
 
@@ -74,8 +74,8 @@ const frenchBoutiqueTheme = createTheme({
         root: {
           borderRadius: 16,
           boxShadow: "0 4px 20px rgba(0,0,0,0.05)",
-          border: "1px solid #BFAF9B", // Beige gray
-          backgroundColor: "#FFFDF8", // Light cream
+          border: "1px solid #BFAF9B", 
+          backgroundColor: "#FFFDF8", 
         },
       },
     },
@@ -85,21 +85,21 @@ const frenchBoutiqueTheme = createTheme({
           marginBottom: 20,
           "& .MuiOutlinedInput-root": {
             "& fieldset": {
-              borderColor: "#BFAF9B", // Beige gray
+              borderColor: "#BFAF9B", 
               borderRadius: 8,
             },
             "&:hover fieldset": {
-              borderColor: "#C3B1E1", // Lavender purple
+              borderColor: "#C3B1E1", 
             },
             "&.Mui-focused fieldset": {
-              borderColor: "#C3B1E1", // Lavender purple
+              borderColor: "#C3B1E1", 
             },
           },
           "& .MuiInputLabel-root": {
-            color: "#4E342E", // Cocoa brown
+            color: "#4E342E", 
           },
           "& .MuiInputLabel-root.Mui-focused": {
-            color: "#C3B1E1", // Lavender purple
+            color: "#C3B1E1", 
           },
         },
       },
@@ -107,9 +107,9 @@ const frenchBoutiqueTheme = createTheme({
     MuiCheckbox: {
       styleOverrides: {
         root: {
-          color: "#BFAF9B", // Beige gray
+          color: "#BFAF9B", 
           "&.Mui-checked": {
-            color: "#C3B1E1", // Lavender purple
+            color: "#C3B1E1", 
           },
         },
       },
@@ -117,10 +117,10 @@ const frenchBoutiqueTheme = createTheme({
     MuiIconButton: {
       styleOverrides: {
         root: {
-          color: "#BFAF9B", // Beige gray
+          color: "#BFAF9B", 
           "&:hover": {
-            backgroundColor: "rgba(195, 177, 225, 0.1)", // Lavender purple with opacity
-            color: "#C3B1E1", // Lavender purple
+            backgroundColor: "rgba(195, 177, 225, 0.1)", 
+            color: "#C3B1E1", 
           },
         },
       },
@@ -129,14 +129,12 @@ const frenchBoutiqueTheme = createTheme({
   direction: "rtl",
 })
 
-// Confetti component with animation
 const ConfettiAnimation = () => {
   const [confetti, setConfetti] = useState<JSX.Element[]>([])
 
   useEffect(() => {
     const createConfetti = () => {
-    //   const pieces = []
-    const pieces: JSX.Element[] = [];
+   const pieces: JSX.Element[] = [];
       const colors = ["#FFFDF8", "#F8F5F0", "#F5F2EA", "#F2EFE5"]
 
       for (let i = 0; i < 50; i++) {
@@ -191,8 +189,6 @@ const ConfettiAnimation = () => {
             }
         `
     document.head.appendChild(style)
-
-    // ניקוי
     return () => {
       document.head.removeChild(style)
     }
@@ -207,7 +203,6 @@ export const HomePage = () => {
   return (
     <ThemeProvider theme={frenchBoutiqueTheme}>
       <UserProvider>
-        {/* Global styles to prevent scrolling and ensure full coverage */}
         <style>{`
                     html, body {
                         margin: 0;
@@ -228,18 +223,17 @@ export const HomePage = () => {
           sx={{
             minHeight: "100vh",
             width: "100%",
-            backgroundColor: "#FFFDF8", // Light cream
+            backgroundColor: "#FFFDF8", 
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             direction: "rtl",
             position: "relative",
-            overflow: "hidden", // Prevent overflow
+            overflow: "hidden", 
             padding: 0,
             margin: 0,
           }}
         >
-          {/* Animated confetti */}
           <ConfettiAnimation />
 
           <Container
@@ -301,8 +295,8 @@ export const HomePage = () => {
                 </Box>
               ) : (
                 <>
-                  {formType === "login" && <Login2 onBackClick={() => setFormType(null)} />}
-                  {formType === "signup" && <SignUp2 onBackClick={() => setFormType(null)} />}
+                  {formType === "login" && <Login onBackClick={() => setFormType(null)} />}
+                  {formType === "signup" && <SignUp onBackClick={() => setFormType(null)} />}
                 </>
               )}
             </Paper>

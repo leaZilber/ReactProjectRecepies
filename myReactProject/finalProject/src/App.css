@@ -1,10 +1,10 @@
-/* #headDiv{
+ #headDiv{
   background-color:blueviolet;
   size: 100%;
 }
 #head{
   background-color: darkcyan;
-} */
+}
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -47,4 +47,4 @@
 .read-the-docs {
   color: #888;
 }
-
+ 
