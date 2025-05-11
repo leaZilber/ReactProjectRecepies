@@ -3,11 +3,11 @@ import { UserProvider } from "./userModel"
 import { AllRecipes } from "./allRecipies"
 import HomePage from "./homePage"
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
-import React from "react"
 import { Login } from "./login"
 import { SignUp } from "./signIn"
 import ShoppingList from "./shoppingList"
 import { AddRecipeForm } from "./addRecipeForm"
+import React from "react"
 
 function App() {
   return (
@@ -17,8 +17,8 @@ function App() {
           <Route path="/allrecipes" element={<AllRecipes />} />
           <Route path="/addrecipe" element={<AddRecipeForm />} />
           <Route path="/shoppinglist" element={<ShoppingList />} />
-          <Route path="/login" element={<Login onBackClick={() => {}} />} />
-          <Route path="/signup" element={<SignUp onBackClick={() => {}} />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
           <Route path="/" element={<HomePage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
@@ -28,4 +28,3 @@ function App() {
 }
 
 export default App
-

@@ -295,8 +295,8 @@ export const HomePage = () => {
                 </Box>
               ) : (
                 <>
-                  {formType === "login" && <Login onBackClick={() => setFormType(null)} />}
-                  {formType === "signup" && <SignUp onBackClick={() => setFormType(null)} />}
+                  {formType === "login" && <Login/>}
+                  {formType === "signup" && <SignUp />}
                 </>
               )}
             </Paper>
