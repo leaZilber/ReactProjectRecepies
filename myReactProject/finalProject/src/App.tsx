@@ -16,7 +16,6 @@ function App() {
         <Routes>
           <Route path="/allrecipes" element={<AllRecipes />} />
           <Route path="/addrecipe" element={<AddRecipeForm />} />
-          {/* <Route path="/editrecipe" element={<AddRecipeForm />} /> */}
           <Route path="/shoppinglist" element={<ShoppingList />} />
           <Route path="/login" element={<Login onBackClick={() => {}} />} />
           <Route path="/signup" element={<SignUp onBackClick={() => {}} />} />

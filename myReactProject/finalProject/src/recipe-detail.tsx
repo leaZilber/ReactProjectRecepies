@@ -115,7 +115,7 @@ export const RecipeDetail = ({
             <Button variant="outlined" startIcon={<Edit />} onClick={handleEditClick} sx={{ mr: 2 }}>
               ערוך
             </Button>
-            <Button variant="outlined" color="error" startIcon={<Delete />} onClick={handleDeleteClick}>
+            <Button variant="outlined" color="error" startIcon={<Delete/>} onClick={handleDeleteClick}>
               מחק
             </Button>
           </>
@@ -242,7 +242,6 @@ export const RecipeDetail = ({
         </Grid>
       </Grid>
 
-      {/* Delete Confirmation Dialog */}
       <Dialog open={deleteDialogOpen} onClose={() => setDeleteDialogOpen(false)}>
         <DialogTitle>מחיקת מתכון</DialogTitle>
         <DialogContent>

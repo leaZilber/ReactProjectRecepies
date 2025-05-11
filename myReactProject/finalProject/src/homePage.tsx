@@ -9,26 +9,26 @@ import React from "react"
 const frenchBoutiqueTheme = createTheme({
   palette: {
     primary: {
-      main: "#C3B1E1", 
+      main: "#C3B1E1",
       light: "#F8C8DC",
     },
     secondary: {
-      main: "#F8C8DC", 
-        },
+      main: "#F8C8DC",
+    },
     background: {
-      default: "#FFFDF8", 
-      paper: "#FFFDF8", 
+      default: "#FFFDF8",
+      paper: "#FFFDF8",
     },
     text: {
-      primary: "#4E342E", 
-      secondary: "#4E342E", 
+      primary: "#4E342E",
+      secondary: "#4E342E",
     },
   },
   typography: {
     fontFamily: '"Playfair Display", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif',
     h3: {
       fontWeight: 600,
-      color: "#4E342E", 
+      color: "#4E342E",
       fontFamily: '"Playfair Display", serif',
     },
     h4: {
@@ -43,26 +43,26 @@ const frenchBoutiqueTheme = createTheme({
     },
     h6: {
       fontWeight: 600,
-      color: "#4E342E", 
+      color: "#4E342E",
       fontFamily: '"Playfair Display", serif',
     },
     body1: {
-      color: "#4E342E", 
+      color: "#4E342E",
     },
     body2: {
-      color: "#4E342E", 
+      color: "#4E342E",
     },
   },
   components: {
     MuiButton: {
       styleOverrides: {
         root: {
-          borderRadius: 30, 
+          borderRadius: 30,
           textTransform: "none",
           padding: "10px 24px",
           fontWeight: 600,
-          backgroundColor: "#F8C8DC", 
-          color: "#4E342E", 
+          backgroundColor: "#F8C8DC",
+          color: "#4E342E",
           "&:hover": {
             backgroundColor: "#C3B1E1",
           },
@@ -74,8 +74,8 @@ const frenchBoutiqueTheme = createTheme({
         root: {
           borderRadius: 16,
           boxShadow: "0 4px 20px rgba(0,0,0,0.05)",
-          border: "1px solid #BFAF9B", 
-          backgroundColor: "#FFFDF8", 
+          border: "1px solid #BFAF9B",
+          backgroundColor: "#FFFDF8",
         },
       },
     },
@@ -85,21 +85,21 @@ const frenchBoutiqueTheme = createTheme({
           marginBottom: 20,
           "& .MuiOutlinedInput-root": {
             "& fieldset": {
-              borderColor: "#BFAF9B", 
+              borderColor: "#BFAF9B",
               borderRadius: 8,
             },
             "&:hover fieldset": {
-              borderColor: "#C3B1E1", 
+              borderColor: "#C3B1E1",
             },
             "&.Mui-focused fieldset": {
-              borderColor: "#C3B1E1", 
+              borderColor: "#C3B1E1",
             },
           },
           "& .MuiInputLabel-root": {
-            color: "#4E342E", 
+            color: "#4E342E",
           },
           "& .MuiInputLabel-root.Mui-focused": {
-            color: "#C3B1E1", 
+            color: "#C3B1E1",
           },
         },
       },
@@ -107,9 +107,9 @@ const frenchBoutiqueTheme = createTheme({
     MuiCheckbox: {
       styleOverrides: {
         root: {
-          color: "#BFAF9B", 
+          color: "#BFAF9B",
           "&.Mui-checked": {
-            color: "#C3B1E1", 
+            color: "#C3B1E1",
           },
         },
       },
@@ -117,10 +117,10 @@ const frenchBoutiqueTheme = createTheme({
     MuiIconButton: {
       styleOverrides: {
         root: {
-          color: "#BFAF9B", 
+          color: "#BFAF9B",
           "&:hover": {
-            backgroundColor: "rgba(195, 177, 225, 0.1)", 
-            color: "#C3B1E1", 
+            backgroundColor: "rgba(195, 177, 225, 0.1)",
+            color: "#C3B1E1",
           },
         },
       },
@@ -134,7 +134,7 @@ const ConfettiAnimation = () => {
 
   useEffect(() => {
     const createConfetti = () => {
-   const pieces: JSX.Element[] = [];
+      const pieces: JSX.Element[] = [];
       const colors = ["#FFFDF8", "#F8F5F0", "#F5F2EA", "#F2EFE5"]
 
       for (let i = 0; i < 50; i++) {
@@ -223,13 +223,13 @@ export const HomePage = () => {
           sx={{
             minHeight: "100vh",
             width: "100%",
-            backgroundColor: "#FFFDF8", 
+            backgroundColor: "#FFFDF8",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             direction: "rtl",
             position: "relative",
-            overflow: "hidden", 
+            overflow: "hidden",
             padding: 0,
             margin: 0,
           }}
